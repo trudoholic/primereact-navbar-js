@@ -1,13 +1,18 @@
 import { useRef, useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 // import './App.css'
 
-import "primereact/resources/themes/saga-blue/theme.css"
+// import "primereact/resources/themes/saga-blue/theme.css"
+import "primereact/resources/themes/vela-blue/theme.css"
 import "primereact/resources/primereact.css"
 import "primeicons/primeicons.css"
 import "primeflex/primeflex.css"
 
 import { Dialog } from 'primereact/dialog'
 import { Button } from 'primereact/button'
+
+import NavBar from './components/NavBar'
+import ContactUs from './components/ContactUs'
 
 function App() {
   const dialogRef = useRef(null)
@@ -37,6 +42,13 @@ function App() {
 
   return (
     <>
+      <NavBar />
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/contactUs" element={<ContactUs/>} />
+        </Routes>
+      </BrowserRouter>
+
 
       <Button
         label="Show"

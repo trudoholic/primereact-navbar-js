@@ -1,0 +1,31 @@
+.navbar{
+    display: flex;
+    padding: 2%;
+    border-bottom: 1px solid grey;
+}
+
+.navbarLeft{
+    font-weight: bold;
+}
+
+.navbarRight{
+    margin-left: 65%;
+}
+
+.menuList{
+    text-align: center;
+}
+
+.normalNavRight{
+    display: none;
+}
+
+@media (min-width: 700px){
+    .responsiveNavRight{
+        display: none;
+    }
+
+    .normalNavRight{
+        display: contents;
+    }
+}
